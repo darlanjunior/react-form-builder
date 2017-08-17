@@ -61,7 +61,7 @@
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.8.0",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7",
+    "react-dom": "^15.6.1",
     "react-draft-wysiwyg": "1.7.0",
     "react-hot-loader": "^1.2.7",
     "react-tools": "0.13.3",
