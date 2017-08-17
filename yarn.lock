@@ -942,7 +942,11 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-classnames@^2.1.3, classnames@^2.2.1, classnames@^2.2.5:
+classnames@^1.1.4:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-1.2.2.tgz#e96a2a0222d84925dd8fadb205d66e12f888edf9"
+
+classnames@^2.1.3, classnames@^2.2.0, classnames@^2.2.1, classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -1150,7 +1154,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.6.0:
+create-react-class@^15.5.2, create-react-class@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.0.tgz#ab448497c26566e1e29413e883207d57cfe7bed4"
   dependencies:
@@ -3256,7 +3260,7 @@ promise@^7.0.3, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10:
+prop-types@^15.5.10, prop-types@^15.5.8:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -3357,11 +3361,20 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-anything-sortable@^0.2.2:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/react-anything-sortable/-/react-anything-sortable-0.2.3.tgz#d9183e221676ee212d325e738a76684c0db2c76e"
+react-addons-test-utils@^15.6.0:
+  version "15.6.0"
+  resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.6.0.tgz#062d36117fe8d18f3ba5e06eb33383b0b85ea5b9"
+
+react-addons-update@^0.14.3:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/react-addons-update/-/react-addons-update-0.14.8.tgz#486f1fb71e09ef8ad09c0e95fbe59d173782fe1a"
+
+react-anything-sortable@^1.0.0:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/react-anything-sortable/-/react-anything-sortable-1.7.2.tgz#8c21e656ea946fe11f74c105ad7da2ff552fd3c9"
   dependencies:
-    react "~0.13.0"
+    create-react-class "^15.5.2"
+    prop-types "^15.5.8"
 
 react-bootstrap-native-slider@2.0.1:
   version "2.0.1"
@@ -3389,7 +3402,7 @@ react-datepicker@^0.27.0:
     react-onclickoutside "^4.8.0"
     tether "^1.3.2"
 
-react-dom@^0.14.7:
+react-dom@^0.14.3, react-dom@^0.14.7:
   version "0.14.9"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.14.9.tgz#05064a3dcf0fb1880a3b2bfc9d58c55d8d9f6293"
 
@@ -3429,9 +3442,9 @@ react-html5-slider@^0.1.1:
     react "^15.0.1"
     react-dom "^15.0.1"
 
-react-input-autosize@^0.5.0:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-0.5.3.tgz#5e02b935f3d688466caab519e93e6600194865cb"
+react-input-autosize@^0.6.2:
+  version "0.6.13"
+  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-0.6.13.tgz#386ff7a9d2c3dc016c265bf2e59d397050f65af7"
 
 react-onclickoutside@^4.8.0:
   version "4.9.0"
@@ -3439,20 +3452,24 @@ react-onclickoutside@^4.8.0:
   dependencies:
     object-assign "^4.0.1"
 
-react-select@^0.5.5:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/react-select/-/react-select-0.5.6.tgz#8ece431bf254f288100bb78e10ce33e162cb1e40"
+react-select@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-0.9.1.tgz#e322a2d0a06396a48206b0553df5ec47d16083ba"
   dependencies:
-    classnames "^2.1.3"
-    react-input-autosize "^0.5.0"
+    classnames "^2.2.0"
+    react-input-autosize "^0.6.2"
 
 react-signature-pad@0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/react-signature-pad/-/react-signature-pad-0.0.6.tgz#335547c1f523a36b8396e5365e2f49521e56b9cf"
 
-react-sortable-items@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/react-sortable-items/-/react-sortable-items-0.0.7.tgz#e158e88c6d33efbbdff6b344b7ba702b26ebdd7a"
+react-sortable-items@0.0.121212121212121212121212:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/react-sortable-items/-/react-sortable-items-0.0.12.tgz#a9ca11d887e60ded2bbea28d0e11135a0c494b3d"
+  dependencies:
+    classnames "^1.1.4"
+    react-addons-update "^0.14.3"
+    react-dom "^0.14.3"
 
 "react-star-rating@git+https://github.com/blackjk3/react-star-rating.git":
   version "1.3.2"
@@ -3461,9 +3478,11 @@ react-sortable-items@0.0.7:
     classnames "^2.1.3"
     react "^0.13.3"
 
-react-textarea-autosize@^2.3.1:
-  version "2.5.4"
-  resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-2.5.4.tgz#8c7466a23100dc6e71db224e666f971b389cd26a"
+react-textarea-autosize@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-5.1.0.tgz#ffbf8164fce217c79443c1c17dedf730592df224"
+  dependencies:
+    prop-types "^15.5.10"
 
 react-tools@0.13.3:
   version "0.13.3"
@@ -3472,7 +3491,7 @@ react-tools@0.13.3:
     commoner "^0.10.0"
     jstransform "^10.1.0"
 
-react@^0.13.3, react@~0.13.0:
+react@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/react/-/react-0.13.3.tgz#a2dfa85335d7dc02b82b482f089582e64cc13356"
   dependencies:

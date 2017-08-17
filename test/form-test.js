@@ -2,10 +2,10 @@ require('./dom-mock')('<html><body></body></html>');
 
 var jsdom = require('mocha-jsdom');
 var assert = require('assert');
-var React = require('react/addons');
+var React = require('react');
 var ReactDOM = require('react-dom');
 var GeneratedForm = require('../src/form.jsx').default;
-var TestUtils = React.addons.TestUtils;
+var TestUtils = require('react-addons-test-utils');
 
 var state = {
   "download_path":"",

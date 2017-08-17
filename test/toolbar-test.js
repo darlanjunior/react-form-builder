@@ -2,9 +2,9 @@ require('./dom-mock')('<html><body></body></html>');
 
 var jsdom = require('mocha-jsdom');
 var assert = require('assert');
-var React = require('react/addons');
+var React = require('react');
 var Toolbar = require('../src/toolbar.jsx').default;
-var TestUtils = React.addons.TestUtils;
+var TestUtils = require('react-addons-test-utils');
 
 describe('<Toolbar />', function() {
 
