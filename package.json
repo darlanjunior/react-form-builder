@@ -28,7 +28,9 @@
     "fbemitter": "^2.0.0",
     "jquery": "^3.2.1",
     "moment": "^2.13.0",
+    "prop-types": "^15.5.10",
     "react-addons-test-utils": "^15.6.0",
+    "react-addons-update": "^15.6.0",
     "react-anything-sortable": "^1.0.0",
     "react-bootstrap-native-slider": "2.0.1",
     "react-datepicker": "^0.27.0",
@@ -41,7 +43,7 @@
     "xss": "^0.2.13"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0"
+    "react": "^15.0.0"
   },
   "devDependencies": {
     "babel": "6.23.0",
@@ -60,7 +62,7 @@
     "mocha-jsdom": "^1.1.0",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.8.0",
-    "react": "^0.14.7",
+    "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-draft-wysiwyg": "1.7.0",
     "react-hot-loader": "^1.2.7",
