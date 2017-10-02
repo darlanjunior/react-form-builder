@@ -18,12 +18,9 @@ var ElementStore = Reflux.createStore({
     _saveUrl = saveUrl;
 
     if(typeof urlOrData == 'string' || urlOrData instanceof String) {
-      $.ajax({
-        url: urlOrData,
-        success: function(data) {
-          _data = data;
-          self.trigger(_data);
-        }
+      fetch(urlOrData).then(r => r.json()).then(data => {
+        _data = data;
+        self.trigger(_data);
       })
     } else {
       _data = urlOrData;
@@ -52,17 +49,14 @@ var ElementStore = Reflux.createStore({
 
   save: function() {
     if(_saveUrl) {
-      $.ajax({
-        type: 'POST',
-        url: _saveUrl,
-        data: {
-          task_data: JSON.stringify(_data)
-        },
-        dataType: 'json',
-        success: function(data) {
-          console.log('Saved... ', arguments);
-        }
-      })
+      fetch(_saveUrl, {
+        method: 'POST',
+        body: JSON.stringify({
+          task_data: _data
+        }),
+        dataType: 'json'
+      }).then(response => response.json())
+      .then(data => console.log('Saved... ', arguments))
     }
   }
 
