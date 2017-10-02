@@ -2,7 +2,6 @@ import React from 'react';
 import HeaderBar from './header-bar';
 import Select from 'react-select';
 import SignaturePad from 'react-signature-pad';
-import SortableItemMixin from 'react-sortable-items/SortableItemMixin';
 import SliderNativeBootstrap from 'react-bootstrap-native-slider';
 import ReactDatePicker from 'react-datepicker';
 import StarRating from './star-rating';
@@ -30,7 +29,6 @@ let myxss = new xss.FilterXSS({
 });
 
 let Header = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let headerClasses = 'dynamic-input ' + this.props.data.element + '-input';
     let classNames = 'static';
@@ -40,7 +38,7 @@ let Header = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -58,7 +56,6 @@ let Header = React.createClass({
 
 
 let Paragraph = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let classNames = 'static';
     if (this.props.data.bold) { classNames += ' bold'; }
@@ -67,7 +64,7 @@ let Paragraph = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -84,7 +81,6 @@ let Paragraph = React.createClass({
 })
 
 let Label = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let classNames = 'static';
     if (this.props.data.bold) { classNames += ' bold'; }
@@ -93,7 +89,7 @@ let Label = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -110,13 +106,12 @@ let Label = React.createClass({
 })
 
 let LineBreak = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
 
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -133,7 +128,6 @@ let LineBreak = React.createClass({
 })
 
 let TextInput = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let props = {};
     props.type = "text";
@@ -152,7 +146,7 @@ let TextInput = React.createClass({
       props.disabled = "disabled";
     }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -178,7 +172,6 @@ let TextInput = React.createClass({
 })
 
 let NumberInput = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let props = {};
     props.type = "number";
@@ -197,7 +190,7 @@ let NumberInput = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -223,7 +216,6 @@ let NumberInput = React.createClass({
 })
 
 let TextArea = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let props = {};
     props.className = "form-control";
@@ -241,7 +233,7 @@ let TextArea = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -266,7 +258,6 @@ let TextArea = React.createClass({
 })
 
 let DatePicker = React.createClass({
-  mixins: [SortableItemMixin],
 
   getInitialState() {
     var value, internalValue;
@@ -344,7 +335,7 @@ let DatePicker = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -402,7 +393,6 @@ let DatePicker = React.createClass({
 })
 
 let Dropdown = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let props = {};
     props.className = "form-control";
@@ -420,7 +410,7 @@ let Dropdown = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -451,7 +441,6 @@ let Dropdown = React.createClass({
 
 
 let Signature = React.createClass({
-  mixins: [SortableItemMixin],
   componentDidMount() {
     if (this.props.defaultValue !== undefined && this.props.defaultValue.length > 0 && !this.props.read_only) {
       let canvas = this.refs['canvas_'+this.props.data.field_name];
@@ -482,7 +471,7 @@ let Signature = React.createClass({
       sourceDataURL = `data:image/png;base64,${this.props.defaultValue}`
     }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -511,7 +500,6 @@ let Signature = React.createClass({
 })
 
 let Tags = React.createClass({
-  mixins: [SortableItemMixin],
   getInitialState() {
     return {value: this.props.defaultValue !== undefined ? this.props.defaultValue.split(",") : []};
   },
@@ -538,7 +526,7 @@ let Tags = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -563,7 +551,6 @@ let Tags = React.createClass({
 })
 
 let Checkboxes = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let self = this;
     let classNames = 'checkbox-label';
@@ -572,7 +559,7 @@ let Checkboxes = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -613,7 +600,6 @@ let Checkboxes = React.createClass({
 })
 
 let RadioButtons = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let self = this;
     let classNames = 'radio-label';
@@ -622,7 +608,7 @@ let RadioButtons = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -663,14 +649,13 @@ let RadioButtons = React.createClass({
 })
 
 let Image = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
-    var style = (this.props.data.center) ? { textAlign: 'center' } : '';
+    var style = (this.props.data.center) ? { textAlign: 'center' } : {};
 
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses} style={style}>
         { !this.props.mutable &&
           <HeaderBar parent={this.props.parent} editModeOn={this.props.editModeOn} data={this.props.data} onDestroy={this.props._onDestroy} onEdit={this.props.onEdit} required={this.props.data.required} />
@@ -687,7 +672,6 @@ let Image = React.createClass({
 })
 
 let Rating = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let props = {};
     props.name = this.props.data.field_name;
@@ -702,7 +686,7 @@ let Rating = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -727,12 +711,11 @@ let Rating = React.createClass({
 })
 
 let HyperLink = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -751,12 +734,11 @@ let HyperLink = React.createClass({
 })
 
 let Download = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -775,7 +757,6 @@ let Download = React.createClass({
 })
 
 let Camera = React.createClass({
-  mixins: [SortableItemMixin],
 
   getInitialState() {
     return {img: null};
@@ -809,7 +790,7 @@ let Camera = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>
@@ -855,7 +836,6 @@ let Camera = React.createClass({
 })
 
 let Range = React.createClass({
-  mixins: [SortableItemMixin],
   render() {
     let props = {};
     props.type = "range";
@@ -897,7 +877,7 @@ let Range = React.createClass({
     let baseClasses = 'rfb-item';
     if (this.props.data.pageBreakBefore) { baseClasses += ' alwaysbreak'; }
 
-    return this.renderWithSortable(
+    return (
       <div className={baseClasses}>
         { !this.props.mutable &&
           <div>

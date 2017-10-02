@@ -1,5 +1,7 @@
 module.exports = {
-  entry: ["webpack/hot/dev-server", "./app.js"],
+  entry: {
+    app: ["./app.js"]
+  },
 
   output: {
     filename: "app.js",
@@ -23,6 +25,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.json', '.jsx', '.css', '.scss']
+    extensions: ['.js', '.json', '.jsx', '.css', '.scss']
   }
 }

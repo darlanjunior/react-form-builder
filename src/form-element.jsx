@@ -21,7 +21,7 @@ export default React.createClass({
   render() {
     var headerClasses = 'dynamic-input ' + this.props.data.element + '-input';
 
-    return this.renderWithSortable(
+    return (
       <div>
         <HeaderBar name={this.props.data.text} onDestroy={this.props.onDestroy} onEdit={this.props.onEdit} static={this.props.data.static} required={this.props.data.required} />
         {this.props.children}
